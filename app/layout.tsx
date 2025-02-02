@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Survey lang po",
-  description: "Survey for Rynskie",
+  title: "Market Place",
+  description: "Survey for Rina",
 };
 
 export default function RootLayout({

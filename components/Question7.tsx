@@ -28,8 +28,8 @@ export default function Question7 (props: Props) {
         setIsHovered(true)
         setPosition((curr:any) => (
             {
-                top: Math.random() * window.innerHeight,
-                left: Math.random() * window.innerWidth,
+                top: Math.random() * (window.innerHeight-100),
+                left: Math.random() * (window.innerWidth-100),
 
             }
         ))
@@ -64,21 +64,21 @@ export default function Question7 (props: Props) {
             <br></br>
             <br></br>
             <div className="flex gap-4">
-                <button onClick={() => handleButton("Oo na uy", "left")} className={`${data.showNextButton? "hidden": "block"}`}>Oo na uy</button>
+                <button onClick={() => handleButton("Oo na kainis", "left")} className={`${data.showNextButton? "hidden": "block"}`}>Oo na kainis</button>
                 <button 
                     onClick={() => 
-                    handleButton("No", "right")} 
+                    handleButton("No nga sabi", "right")} 
                     style={
                         {
                             top: position.top,
                             left: position.left
                         }
                     }
-                    className={`${data.showNextButton? "hidden": "block"} ${isHovered? `transition-all duration-150 absolute`: "relative"}`}
+                    className={`${data.showNextButton? "hidden": "block"} ${isHovered? `whitespace-nowrap transition-all duration-150 absolute`: "relative"}`}
                     onMouseEnter={onMouseEnter}
                     // onMouseLeave={() => setIsHovered(false)}
                 >
-                    No
+                    No nga sabi eh
                 </button>
                 <button onClick={() => setQuestionIndex((curr:number) => curr+2)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
             </div>

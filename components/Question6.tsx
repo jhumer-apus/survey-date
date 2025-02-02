@@ -40,21 +40,21 @@ export default function Question6 (props: Props) {
         <Fragment>
             <div className="max-w-[500px] flex flex-col items-center m-auto mt-20">
             <img src={data.currExpression} width={200}/>
-            <p className="text-3xl font-semibold text-center">{"Hehe Kanang Laag us kadyut lang. Sa hapon lang 4:10 pm. I have so many things to tell you on personal :>"}</p>
+            <p className="text-3xl font-semibold text-center">{"I would like to ask you if you could be my valentine this coming February 14, 2025 around 7:00 pm :> ?"}</p>
             <br></br>
             <p className="text-2xl font-semibold text-center">Your Answer: {data?.answer}</p>
             <br></br>
             <br></br>
             <div className="flex gap-4">
-                <button onClick={() => handleButton("Oo naman sure na sure", "left")} className={`${data.showNextButton? "hidden": "block"}`}>Oo naman sure na sure</button>
+                <button onClick={() => handleButton("Oo naman ikaw pa", "left")} className={`${data.showNextButton? "hidden": "block"}`}>Oo naman ikaw pa</button>
                 <button 
                     onClick={() => 
-                    handleButton("Dili ko", "right")} 
+                    handleButton("No", "right")} 
                     className={`${data.showNextButton? "hidden": "block"}`}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
-                    Dili ko
+                    No
                 </button>
                 <button onClick={() => setQuestionIndex((curr:number) => curr+2)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
             </div>

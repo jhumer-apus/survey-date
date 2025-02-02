@@ -1,7 +1,7 @@
 "use client"
 
 import AudioPlay from "@/components/AudioPlay";
-import BirthdayCountdown from "@/components/BirthdayCountdown";
+import DateCountdown from "@/components/DateCountDown";
 import ParticleComponent from "@/components/ParticleComponent";
 import Question1 from "@/components/Question1";
 import Question2 from "@/components/Question2";
@@ -55,7 +55,7 @@ export default function Home() {
       setQuestionIndex={setQuestionIndex}
     />,
 
-    <BirthdayCountdown />
+    <DateCountdown />
   ]
 
   

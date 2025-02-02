@@ -7,6 +7,6 @@ export const expression = {
     shy_cute: "assets/gif/shy-cute.gif",
     yey: "assets/gif/yey.gif",
     wow: "assets/gif/nibble_wow.gif",
-    birthday_countdown: "assets/gif/bday_countdown.gif",
-    happy_birthday: "assets/gif/happy-birthday.gif"
+    date_countdown: "assets/images/are-ready-our-date.png",
+    valentines_day: "assets/gif/valentine.gif"
 }

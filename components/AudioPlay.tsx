@@ -8,11 +8,11 @@ export default function AudioPlay(props:Props) {
     const isPlay = props
 
     const [currMusicIndex, setCurrMusicIndex] = useState<number>(0)
-    const musics = [    
+    const musics = [
+        "assets/musics/sining.mp3",
         "assets/musics/my_love.mp3",
         "assets/musics/ikaw_at_ako.mp3",
-        "assets/musics/palagi.mp3",
-        "assets/musics/sining.mp3",
+        "assets/musics/make_it_with_you.mp3",
     ]
 
 
@@ -27,14 +27,6 @@ export default function AudioPlay(props:Props) {
             }
         }
     },[isPlay])
-
-    // const handlePlayAudio = () => {
-    //     if (audioRef.current) {
-    //         audioRef.current.play().catch((error:any) => {
-    //             console.error('Error attempting to play audio:', error);
-    //         });
-    //     }
-    // };
 
     const handleTrackEnd = () => {
         if (audioRef.current) {

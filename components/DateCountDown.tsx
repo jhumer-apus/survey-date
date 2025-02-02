@@ -3,7 +3,7 @@ import dayjs from "dayjs"
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
 
-export default function BirthdayCountdown() {
+export default function DateCountdown() {
 
     const [dateCountDown, setDateCountDown] = useState<any>(
         {
@@ -16,7 +16,7 @@ export default function BirthdayCountdown() {
 
     useEffect(() => {
         setInterval(() => {
-            if(!checkBirthdate()){
+            if(!checkDinnerDate()){
                 countDown()
             }
 
@@ -25,9 +25,9 @@ export default function BirthdayCountdown() {
 
     const countDown = () => {
         const today = dayjs()
-        const birthdate = dayjs('2024-09-14')
+        const DinnerDate = dayjs('2025-02-14')
     
-        const differenceInSec = birthdate.diff(today, 'second');
+        const differenceInSec = DinnerDate.diff(today, 'second');
         const hours = Math.floor(differenceInSec / 3600);
         const mins = Math.floor((differenceInSec % 3600) / 60);
         const sec = differenceInSec % 60;
@@ -41,29 +41,29 @@ export default function BirthdayCountdown() {
         ))
     }
 
-    const checkBirthdate = () => {
+    const checkDinnerDate = () => {
 
-        const birthdate = dayjs('2024-09-14')
+        const DinnerDate = dayjs('2025-02-14')
         const today = dayjs().startOf('day');
-        const isToday = today.isSame(birthdate, 'day');
+        const isToday = today.isSame(DinnerDate, 'day');
 
-        return isToday
+        return true
     }
 
     return (
-        <div>
-            <div className="mt-10">
+        <div className="h-screen flex flex-col justify-end">
+            <div className="">
                 {
-                    checkBirthdate() 
+                    checkDinnerDate() 
 
                     ? <div>
-                        <img src={expression.happy_birthday} className="m-auto" height={100}/>
-                        <h1 className="text-center text-3xl font-bold">Happy Birthday Ma'am Rynskieee!!!</h1>
+                        <img src={expression.valentines_day} className="m-auto" height={100}/>
+                        <h1 className="text-center text-3xl font-bold">Coming!!</h1>
                      </div>
 
                     : <div>
-                        <img src={expression.birthday_countdown} className="m-auto" height={100}/>
-                        <h1 className="text-center text-3xl">Birthday Countdown</h1>
+                        <img src={expression.date_countdown} className="m-auto" width="500"/>
+                        <h1 className="text-center text-3xl">Date Countdown</h1>
                         <h1 className="text-center text-3xl font-bold">{dateCountDown.hours} hr/s  {dateCountDown.mins} min/s {dateCountDown.sec} s</h1>
                      </div>
                 }
