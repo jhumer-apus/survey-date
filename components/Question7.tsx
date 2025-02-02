@@ -78,7 +78,7 @@ export default function Question7 (props: Props) {
                 >
                     No nga sabi eh
                 </button>
-                <button onClick={() => setQuestionIndex((curr:number) => curr+2)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
+                <button onClick={() => setQuestionIndex((curr:number) => curr+1)} className={`${data.showNextButton? "block": "hidden"}`}>Next</button>
             </div>
             </div>
       </Fragment>
