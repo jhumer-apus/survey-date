@@ -65,9 +65,7 @@ export default function Question7 (props: Props) {
             <br></br>
             <div className="flex gap-4">
                 <button onClick={() => handleButton("Oo na kainis", "left")} className={`${data.showNextButton? "hidden": "block"}`}>Oo na kainis</button>
-                <button 
-                    onClick={() => 
-                    handleButton("No nga sabi", "right")} 
+                <button
                     style={
                         {
                             top: position.top,

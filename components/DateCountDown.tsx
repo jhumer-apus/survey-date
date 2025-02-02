@@ -47,7 +47,7 @@ export default function DateCountdown() {
         const today = dayjs().startOf('day');
         const isToday = today.isSame(DinnerDate, 'day');
 
-        return true
+        return isToday
     }
 
     return (

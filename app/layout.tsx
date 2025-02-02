@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Market Place",
+  title: "Blog",
   description: "Survey for Rina",
 };
 
